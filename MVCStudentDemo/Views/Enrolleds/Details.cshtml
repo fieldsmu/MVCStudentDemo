@@ -1,0 +1,42 @@
+﻿@model MVCStudentDemo.Models.Enrolled
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Enrolled</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Class.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.Firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
